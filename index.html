@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Knowledge Assistant - Learn AI Fundamentals</title>
+    <meta name="description" content="Interactive AI educational chatbot that serves as your knowledge assistant for learning AI fundamentals and concepts.">
+    <meta name="keywords" content="AI education, machine learning, artificial intelligence, learning assistant, AI fundamentals">
+    <meta property="og:title" content="AI Knowledge Assistant - Learn AI Fundamentals">
+    <meta property="og:description" content="Interactive AI educational chatbot for learning AI fundamentals and concepts.">
+    <meta name="twitter:title" content="AI Knowledge Assistant">
+    <meta name="twitter:description" content="Interactive AI educational chatbot for learning AI fundamentals and concepts.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+        @layer theme {
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #f8fafc;
+            --accent-color: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --chat-bg: #ffffff;
+            --message-user-bg: #6366f1;
+            --message-ai-bg: #f3f4f6;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+    }
+
+    @layer components {
+        .chat-container {
+            @apply bg-white rounded-2xl shadow-2xl backdrop-blur-sm;
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105;
+        }
+        
+        .feature-card {
+            @apply bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+        }
+    }
+
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Voiceflow Chat Widget Integration -->
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                window.voiceflow.chat.load({
+                    verify: {
+                        projectID: '68c69b5e3c40bec5752bfe31'
+                    },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production',
+                    voice: {
+                        url: "https://runtime-api.voiceflow.com"
+                    }
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+    </script>
+
+    <script type="text/babel" src="components/ChatInterface.js"></script>
+    <script type="text/babel" src="app.js"></script>
+
+
+
+</body>
+
+</html>
