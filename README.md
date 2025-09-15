@@ -14,15 +14,6 @@ The assistant helps users learn **AI fundamentals**, **machine learning concepts
 - ⚡ **Fast Loading**: Lightweight with minimal dependencies  
 - 🤖 **Voiceflow Integration**: Embedded AI assistant for live chat  
 
-## Project Structure
-├── index.html # Landing page with "Open Chat" button
-├── chat.html # Dedicated chat page with AI agent (centered, large)
-├── app.js # Main logic
-├── chat-app.js # Chat page logic
-└── components/
-├── ChatInterface.js # Landing page interface
-└── ChatPage.js # Dedicated chat page
-
 ## Navigation Flow
 1. **Landing Page** → Displays "Open Chat" button.  
 2. **Chat Page** → AI agent appears **centered and enlarged**.  
