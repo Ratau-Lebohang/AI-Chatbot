@@ -12,7 +12,16 @@ The assistant helps users learn **AI fundamentals**, **machine learning concepts
 - 🧹 **Minimalist Interface**: Single call-to-action with "Open Chat" button  
 - 📱 **Responsive Layout**: Works seamlessly on desktop & mobile  
 - ⚡ **Fast Loading**: Lightweight with minimal dependencies  
-- 🤖 **Voiceflow Integration**: Embedded AI assistant for live chat  
+- 🤖 **Voiceflow Integration**: Embedded AI assistant for live chat
+
+## Tool Stack
+- **Frontend Framework:** React 18 (Production build)
+- **Styling:** TailwindCSS with custom CSS variables
+ **Icons:** Lucide Static Font Icons
+- **Build:** No build step required - runs directly in browser
+-**JavaScript:** Babel Standalone for JSX transformation
+- **Chat Integration:** Voiceflow Chat Widget
+- **Hosting:** Trickle Platform
 
 ## Navigation Flow
 1. **Landing Page** → Displays "Open Chat" button.  
